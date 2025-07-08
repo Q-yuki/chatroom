@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加入房间</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="join-room.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="user-info">
+            <span class="username">当前用户</span>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <div class="card-grid">
+            <!-- 加入房间表单卡片 -->
+            <div class="room-card">
+                <h2>加入房间</h2>
+                <form id="join-room-form">
+                    <div class="input-group">
+                        <input 
+                            type="text" 
+                            id="room-id" 
+                            class="room-input"
+                            placeholder="输入6位房间ID"
+                            required
+                            maxlength="6"
+                        >
+                    </div>
+                    <button type="submit" class="action-btn join">
+                        立即加入
+                    </button>
+
+                    <button class="action-btn back-btn" onclick="history.back()">
+                        返回上级
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/common.js"></script>
+    <script src="join-room.js"></script>
+</body>
+</html>

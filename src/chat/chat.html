@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="chat-header-info">
+            <div class="room-meta">
+                <h2 class="room-name">房间ID: <span id="current-room-id">123456</span></h2>
+                <p class="online-count">在线人数: <span id="online-count">1</span></p>
+            </div>
+        </div>
+        <button class="action-btn exit-btn" onclick="leaveRoom()">
+            退出房间
+        </button>
+    </nav>
+
+    <!-- 聊天主容器 -->
+    <div class="main-container">
+        <div class="chat-card">
+            <!-- 消息容器 -->
+            <div id="chat-messages" class="message-container">
+
+            </div>
+
+            <!-- 输入区域 -->
+            <form id="message-form" class="message-form">
+                <input 
+                    type="text" 
+                    id="message-input"
+                    class="room-input"
+                    placeholder="输入聊天内容"
+                    required
+                >
+                <button type="submit" class="action-btn send-btn" onclick="sendMessage()"> 
+                    发送
+                </button>
+                <input type="file" id="image-input" accept="image/*" style="display:none" />
+                <button type="button" class="action-btn send-btn" onclick="document.getElementById('image-input').click()">
+                    图片
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/common.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

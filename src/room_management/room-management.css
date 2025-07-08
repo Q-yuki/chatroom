@@ -1,0 +1,129 @@
+/* style.css */
+:root {
+  --primary-blue: #4A90E2;
+  --primary-green: #00C897;
+  --accent-red: #FF6B6B;
+  --text-dark: #2D3436;
+  --text-light: #FFFFFF;
+  --background: #F8F9FA;
+  --card-shadow: 0 8px 30px -10px rgba(0,0,0,0.15);
+}
+
+/* 基础布局 */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* 导航栏 */
+.navbar {
+  background: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.username {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.logout-btn {
+  background: var(--accent-red);
+  color: var(--text-light);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.logout-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(255,107,107,0.3);
+}
+
+/* 主内容容器 */
+.main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* 卡片布局 */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.room-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 表单元素 */
+.room-input {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 2px solid #EDF2F7;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.room-input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.1);
+}
+
+/* 功能按钮 */
+.action-btn {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter 0.3s, transform 0.2s;
+}
+
+.action-btn.join {
+  background: var(--primary-blue);
+}
+
+.action-btn.create {
+  background: var(--primary-green);
+}
+
+.action-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .room-card {
+    padding: 1.5rem;
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
+}

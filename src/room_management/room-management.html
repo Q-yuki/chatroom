@@ -1,0 +1,60 @@
+<!-- room-management.html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Room Management</title>
+    <link rel="stylesheet" href="room-management.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, <span id="username-display"></span></h1>
+        <div class="button-group">
+            <button onclick="handleCreateRoom()">Create Room</button>
+            <button onclick="location.href='./join_room/join-room.html'">Join Room</button>
+            <button onclick="logout()">登出 </button>
+        </div>
+    </div>
+    <script src="./common.js"></script>
+    <script src="room-management.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>房间管理</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="room-management.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+    <div class="user-info">
+        <span class="username">当前用户</span>
+    </div>
+    <button class="logout-btn" onclick="logout()">登出系统</button>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <div class="card-grid">
+            <!-- 加入房间卡片 -->
+            <div class="room-card">
+            <h2>加入现有房间</h2>
+            <button class="action-btn join" onclick="handleJoinRoom()">立即加入</button>
+        </div>
+
+        <!-- 创建房间卡片 -->
+        <div class="room-card">
+            <h2>创建新房间</h2>
+            <button class="action-btn create" onclick="handleCreateRoom()">创建房间</button>
+            </div>
+        </div>
+    </div>
+    <script src="/common.js"></script>
+    <script src="room-management.js"></script>
+</body>
+</html>
