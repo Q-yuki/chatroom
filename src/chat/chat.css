@@ -8,10 +8,7 @@
     --accent-red: #FF6B6B;
 }
 
-/* 消息容器增强 */
-/* chat.css 修改部分 */
-
-/* 主容器调整为全屏布局 */
+/* 主容器全屏布局 */
 .main-container {
     position: fixed;
     top: 0;
@@ -25,17 +22,17 @@
     box-shadow: none;
 }
 
-/* 消息容器固定高度 */
+/* 消息区域高度控制 */
 .message-container {
     flex: 1;
-    min-height: 0; /* 关键：允许内容压缩 */
-    height: calc(100vh - 160px); /* 总高度 - 导航和输入框高度 */
+    min-height: 0;
+    height: calc(100vh - 160px);
     overflow-y: auto;
     padding: 1.5rem;
     background: #f8f9fa;
 }
 
-/* 输入框固定定位 */
+/* 输入框固定底部 */
 .message-form {
     position: fixed;
     left: 0;
@@ -49,7 +46,7 @@
     z-index: 100;
 }
 
-/* 调整导航栏定位 */
+/* 顶部导航栏固定 */
 .navbar {
     position: fixed;
     top: 0;
@@ -59,15 +56,15 @@
     background: white;
 }
 
-/* 消息区域间距调整 */
+/* 聊天卡片内边距 */
 .chat-card {
-    padding-top: 60px; /* 导航栏高度 */
-    padding-bottom: 80px; /* 输入框高度 */
+    padding-top: 60px;
+    padding-bottom: 80px;
     height: 100vh;
     overflow: hidden;
 }
 
-/* 桌面端居中布局 */
+/* 居中布局（桌面端） */
 @media (min-width: 768px) {
     .chat-card {
         max-width: 800px;
@@ -82,7 +79,7 @@
     }
 }
 
-/* QQ风格消息气泡 */
+/* QQ气泡风格 */
 .message-bubble {
     display: flex;
     gap: 12px;
@@ -127,7 +124,7 @@
     border-radius: 12px 12px 12px 0;
 }
 
-/* 消息元信息 */
+/* 发信人与时间 */
 .sender-name {
     font-size: 0.85rem;
     color: var(--text-dark);
@@ -141,110 +138,6 @@
     align-self: flex-end;
 }
 
-/* 输入区域优化 */
+/* 输入框区域样式 */
 .message-form {
-    background: white;
-    padding: 1rem;
-    border-top: 1px solid var(--border-color);
-    gap: 0.8rem;
-}
-
-.room-input {
-    flex: 1;
-    border: none;
-    background: transparent;
-    padding: 0.8rem;
-}
-
-/* 导航栏调整 */
-.chat-header-info {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.room-meta h2 {
-    font-size: 1.1rem;
-    margin: 0;
-}
-
-.online-count {
-    font-size: 0.9rem;
-    color: var(--text-dark);
-    opacity: 0.7;
-    margin: 0;
-}
-
-/* chat.css 补充按钮样式 */
-
-/* 基础按钮样式 */
-.action-btn {
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px;
-    border: none;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 
-        background-color 0.2s ease,
-        transform 0.1s ease,
-        box-shadow 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-/* 发送按钮 */
-.send-btn {
-    background: var(--primary-blue);
-    color: var(--text-light);
-    min-width: 80px;
-}
-
-.send-btn:hover {
-    background: #3B7EC2;
-    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
-}
-
-.send-btn:active {
-    transform: scale(0.98);
-}
-  
-/* 退出按钮 */
-.exit-btn {
-    background: var(--accent-red);
-    color: var(--text-light);
-    padding: 0.7rem 1.2rem;
-}
-
-.exit-btn:hover {
-    background: #E65050;
-    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.2);
-}
-
-/* 输入框按钮交互 */
-.room-input:focus + .send-btn {
-    outline: 2px solid var(--primary-blue);
-    outline-offset: 2px;
-}
-
-/* 移动端适配 */
-@media (max-width: 768px) {
-    .action-btn {
-        padding: 0.8rem;
-        font-size: 0.9rem;
-    }
-    
-    .send-btn {
-        min-width: auto;
-        flex: 1;
-    }
-    
-    .message-form {
-        grid-template-columns: 1fr auto;
-    }
-}
-
-/* 保持系统一致的按压效果 */
-button:active {
-    transform: translateY(1px);
-}
+    background: whi
